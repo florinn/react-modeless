@@ -56,6 +56,6 @@ module.exports = Merge(CommonConfig, {
         noInfo: false,
         stats: 'minimal',
         publicPath: publicPath,
-        contentBase: './example/src'
+        contentBase: './example'
     }
 })
