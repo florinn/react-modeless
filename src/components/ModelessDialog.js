@@ -49,6 +49,7 @@ class ModelessDialog extends React.Component {
 
 		const finalDialogStyle = Object.assign({}, defaultDialogStyle, style)
 		const finalBackdropStyle = Object.assign({}, defaultBackdropStyle, backdropStyle)
+		const handleCloseDialog = clickBackdropToClose ? this.close : undefined
 
 		return (
 			<div className={containerClassName}>
@@ -57,7 +58,7 @@ class ModelessDialog extends React.Component {
 				</div>
 				{!noBackdrop &&
 					<div className={backdropClassName} style={finalBackdropStyle}
-						onClick={clickBackdropToClose && this.close} />}
+						onClick={handleCloseDialog} />}
 			</div>
 		)
 	}
